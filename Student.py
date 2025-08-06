@@ -12,6 +12,8 @@ class Student:
 
     @age.setter
     def age(self, age):
+        if 21 > int(age.strip()):
+            raise ValueError("You are minor.")
         self._age = age
 
     @classmethod
